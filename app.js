@@ -1,6 +1,6 @@
 'use strict';
 const http = require('http'), url = require('url'), net  = require('net');
-const HTTP_PORT = process.argv[2] || 8080;  // internal proxy server port
+const HTTP_PORT = process.argv[2] || 80;  // internal proxy server port
 const PROXY_URL = process.argv[3] || null;  // external proxy server URL
 const PROXY_HOST = PROXY_URL ?  url.parse(PROXY_URL).hostname    : null;
 const PROXY_PORT = PROXY_URL ? (url.parse(PROXY_URL).port || 80) : null;
